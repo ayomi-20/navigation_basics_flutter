@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'detail_screen.dart';
 void main() => runApp(MaterialApp(home: HomeScreen()));
 class HomeScreen extends StatelessWidget {
 @override
@@ -45,6 +46,25 @@ class SecondScreen extends StatelessWidget {
               },
               child: Text('Go To Third Screen'),
             ),
+            
+            SizedBox(height: 20),
+
+            ElevatedButton(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => DetailScreen( 
+          // passing data when navigating
+          productName: "Lip Gloss",
+          productDescription: "Moisturizing Long lasting effect lip gloss crafted from nature",
+          price: 150000,
+        ),
+      ),
+    );
+  },
+  child: Text("View Product Details"),
+),
 
           ],
         ),
