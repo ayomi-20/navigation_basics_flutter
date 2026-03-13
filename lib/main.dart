@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
+import 'products_screen.dart';
+import 'settings_screen.dart';
+import 'detail_named_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/products': (context) => ProductsScreen(),
+        '/detail': (context) => DetailNamedScreen(),
+        '/settings': (context) => SettingsScreen(),
+      },
+    ),
+  );
 }
-
- class MyApp extends StatelessWidget {
-   const MyApp({super.key});
-
-   // This widget is the root of your application.
-   @override
-   Widget build(BuildContext context) {
-     return MaterialApp(
-       home: HomeScreen(),
-     );}}

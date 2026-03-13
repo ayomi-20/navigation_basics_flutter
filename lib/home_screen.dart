@@ -66,6 +66,15 @@ class SecondScreen extends StatelessWidget {
   child: Text("View Product Details"),
 ),
 
+SizedBox(height: 20),
+
+ElevatedButton(
+  onPressed: () {
+    Navigator.pushNamed(context, '/products');
+  },
+  child: const Text("Go To Products (Named Route)"),
+),
+
           ],
         ),
       ),
