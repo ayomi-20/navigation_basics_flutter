@@ -75,6 +75,22 @@ ElevatedButton(
   child: const Text("Go To Products (Named Route)"),
 ),
 
+SizedBox(height: 20),
+
+ElevatedButton(
+  onPressed: () {
+    Navigator.pushNamed(
+      context,
+      '/routes_named_arguments',
+      arguments: {
+        'name': 'Ugali',
+        'price': 5000,
+      },
+    );
+  },
+  child: const Text("Open Named Routes (Arguments)"),
+),
+
           ],
         ),
       ),

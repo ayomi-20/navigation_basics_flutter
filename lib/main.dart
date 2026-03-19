@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
+import 'main_app.dart';
 import 'products_screen.dart';
 import 'settings_screen.dart';
 import 'detail_named_screen.dart';
+import 'named_detail_screen.dart';
 
 void main() {
   runApp(
     MaterialApp(
+      home: MainApp(), // ← switched from HomeScreen to MainApp
       initialRoute: '/',
       routes: {
-        '/': (context) => HomeScreen(),
         '/products': (context) => ProductsScreen(),
         '/detail': (context) => DetailNamedScreen(),
         '/settings': (context) => SettingsScreen(),
+        '/routes_named_arguments': (context) => const NamedDetailScreen(),
       },
     ),
   );
